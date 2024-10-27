@@ -1,0 +1,28 @@
+Graphs are of types directed, undirected, cyclic, acyclic, weighted, unweighted, connected, disconnected.
+
+Graphs if they are only connected in sequence - we use adjacency lists as values, keys as vertex values. We implement it in Adjacency matrix. Adjacency matrix has to be filled in both the ways as we are talking about undirected graphs.
+
+If Graphs vertices are strings or integer or any other type or are not in sequence, we use Hash Maps.
+
+We can traverse the graph in two ways - Depth First Search (Recursive approach), Breadth First Search ( Level order traversal)
+
+For any graph problem, first you need to construct adjacency list and then apply either DFS or BFS.
+
+In graph we need visited set, we may fall in endless loop if we do not have visited marked.
+
+In case of BFS, we always maintain a queue - and pop and push,explore
+
+Idea of cyclic graph is if you are visiting an already visited non-parent node - then the graph is cyclic.
+
+If you dont have connected nodes in the same set, then the graph is bipartite
+
+Every non cyclic graphs can be split into bipartite.
+
+For cyclic graphs - even number of nodes is bipartite. odd numbers in cycles is not bipartite.
+
+We have to maintain a distance array to find distance of every node from source - if there are no two same distances from source - then the cycle is bipartite. For e.g. in 6 nodes - then distances from source are 1s, 2s and only a single 3 - hence this is bipartite.
+Always distance of neighbor is equal to distance from source + 1
+
+In bipartite problem - the adjacency list is directly given instead of just the edge list as in previous problems.
+
+How can you solve a graph problem without the adjacency list? - we need to look at number of islands problem -200 leet code. Time complexity -O(mn)- topological sort - both DFS, BFS and course schedule problem still remaining to discuss in the next session on Tomorrow at 9PM EST.
